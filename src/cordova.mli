@@ -72,6 +72,16 @@ module Event : sig
   let vol_down_button f = add_event_listener Vol_down_button f false]
 end
 
-(*------------------- TODO --------------------- *)
 val openInSafariView : url:string -> unit
   [@@js.global "cordova.openInSafariView"]
+
+[@@@js.stop]
+
+val safari_available : unit -> bool
+
+[@@@js.start]
+
+[@@@js.implem
+let safari_available () =
+  Js_of_ocaml.Js.Optdef.test
+    Js_of_ocaml.Js.Unsafe.global##.cordova##.openInSafariView]

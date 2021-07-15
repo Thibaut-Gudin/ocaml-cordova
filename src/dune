@@ -7,5 +7,5 @@
  (public_name cordova)
  (modes byte)
  (libraries gen_js_api)
- ; (preprocess (pps gen_js_api))
+ (preprocess (pps js_of_ocaml-ppx))
 )
