@@ -71,3 +71,7 @@ module Event : sig
 
   let vol_down_button f = add_event_listener Vol_down_button f false]
 end
+
+(*------------------- TODO --------------------- *)
+val openInSafariView : url:string -> unit
+  [@@js.global "cordova.openInSafariView"]
