@@ -79,9 +79,15 @@ val openInSafariView : url:string -> unit
 
 val safari_available : unit -> bool
 
+val is_available : unit -> bool
+
 [@@@js.start]
 
 [@@@js.implem
 let safari_available () =
   Js_of_ocaml.Js.Optdef.test
     Js_of_ocaml.Js.Unsafe.global##.cordova##.openInSafariView]
+
+[@@@js.implem
+let is_available () =
+  Js_of_ocaml.Js.Optdef.test Js_of_ocaml.Js.Unsafe.global##.cordova]
