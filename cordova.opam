@@ -1,10 +1,13 @@
 opam-version: "2.0"
+version: "1.0"
 maintainer:   "Danny Willems <contact@danny-willems.be>"
 authors:      "Danny Willems <contact@danny-willems.be>"
-homepage:     "https://github.com/dannywillems/ocaml-cordova"
-bug-reports:  "https://github.com/dannywillems/ocaml-cordova/issues"
-dev-repo:     "https://github.com/dannywillems/ocaml-cordova"
+homepage:     "git+https://github.com/dannywillems/ocaml-cordova"
+bug-reports:  "git+https://github.com/dannywillems/ocaml-cordova/issues"
+dev-repo:     "git+https://github.com/dannywillems/ocaml-cordova"
 license:      "LGPL-3.0 with OCaml linking exception"
+description: "Binding to the cordova object using gen_js_api"
+synopsis: "Binding to the cordova object using gen_js_api"
 build: [[ "dune" "build" "-j" jobs "-p" name "@install" ]]
 depends: [
   "ocaml" { >= "4.03.0" }
